@@ -49,7 +49,7 @@ export default function Cart() {
         }
       };
 
-      const response = await axios.post('http://localhost:3000/api/orders', orderData);
+      const response = await axios.post('https://clothes-production-bc86.up.railway.app/api/orders', orderData);
       localStorage.removeItem('cart');
       setCart([]);
       navigate(`/order/${response.data.order._id}`);

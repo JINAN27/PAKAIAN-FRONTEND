@@ -21,7 +21,7 @@ export default function Shipping() {
 
   const fetchProvinces = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/provinces');
+      const response = await axios.get('https://clothes-production-bc86.up.railway.app/api/provinces');
       setProvinces(response.data);
     } catch (err) {
       setError('Gagal mengambil data provinsi: ' + err.message);
@@ -30,7 +30,7 @@ export default function Shipping() {
 
   const fetchCities = async (provinceId) => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/cities/${provinceId}`);
+      const response = await axios.get(`https://clothes-production-bc86.up.railway.app/api/cities/${provinceId}`);
       setCities(response.data);
     } catch (err) {
       setError('Gagal mengambil data kota: ' + err.message);
@@ -39,7 +39,7 @@ export default function Shipping() {
 
   const fetchDistricts = async (cityId) => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/districts/${cityId}`);
+      const response = await axios.get(`https://clothes-production-bc86.up.railway.app/api/districts/${cityId}`);
       setDistricts(response.data);
     } catch (err) {
       setError('Gagal mengambil data kecamatan: ' + err.message);
@@ -75,7 +75,7 @@ export default function Shipping() {
         district: selectedDistrict,
       };
 
-      const response = await axios.post(`http://localhost:3000/api/shipping-cost/${orderId}`, shippingData);
+      const response = await axios.post(`https://clothes-production-bc86.up.railway.app/api/shipping-cost/${orderId}`, shippingData);
       setShippingCost(response.data.shippingCost);
     } catch (err) {
       setError('Gagal menghitung biaya pengiriman: ' + err.message);
@@ -86,7 +86,7 @@ export default function Shipping() {
 
   const handleConfirmShipping = async () => {
     try {
-      await axios.post(`http://localhost:3000/api/orders/${orderId}/confirm-shipping`, {
+      await axios.post(`https://clothes-production-bc86.up.railway.app/api/orders/${orderId}/confirm-shipping`, {
         shippingCost: shippingCost.cost,
         shippingAddress: {
           province: selectedProvince,

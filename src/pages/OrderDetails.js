@@ -13,7 +13,7 @@ export default function OrderDetails() {
     const fetchOrder = async () => {
       try {
         console.log('Mengambil order dengan ID:', orderId);
-        const response = await axios.get(`http://localhost:3000/api/orders/${orderId}`);
+        const response = await axios.get(`https://clothes-production-bc86.up.railway.app/api/orders/${orderId}`);
         console.log('Data order diterima:', response.data);
         setOrder(response.data.order);
         setLoading(false);
@@ -29,7 +29,7 @@ export default function OrderDetails() {
 
   const handlePaymentUpdate = async () => {
     try {
-      const response = await axios.put(`http://localhost:3000/api/orders/${orderId}/payment-status`, {
+      const response = await axios.put(`https://clothes-production-bc86.up.railway.app/api/orders/${orderId}/payment-status`, {
         status: 'sudah dibayar'
       });
       setOrder(response.data.order);

@@ -11,7 +11,7 @@ export default function ProductDetail() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:3000/api/products/${id}`)
+    fetch(`https://clothes-production-bc86.up.railway.app/api/products/${id}`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch product');
@@ -78,7 +78,7 @@ export default function ProductDetail() {
       <div className="row">
         <div className="col-md-6">
           <img 
-            src={`http://localhost:3000${product.image}`} 
+            src={`https://clothes-production-bc86.up.railway.app${product.image}`} 
             alt={product.name} 
             className="img-fluid rounded"
           />
