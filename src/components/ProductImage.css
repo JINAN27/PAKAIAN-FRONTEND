@@ -1,0 +1,24 @@
+.product-detail-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .product-image-container {
+    cursor: pointer;
+  }
+  
+  .product-detail-image__img {
+    max-height: 600px; /* Increased from 500px */
+    width: auto;
+    object-fit: contain;
+  }
+  
+  @media (max-width: 768px) {
+    .product-detail-image__img {
+      max-height: 400px; /* Increased from 300px */
+    }
+  }
+  
+  
