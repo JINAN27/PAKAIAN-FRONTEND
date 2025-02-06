@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://clothes-production-bc86.up.railway.app/api/orders';
+const API_BASE_URL = 'https://pakaian-backend-production.up.railway.app/api/orders';
 
 export const fetchOrder = async (orderId) => {
   const response = await axios.get(`${API_BASE_URL}/${orderId}`);

@@ -1,4 +1,4 @@
-const BASE_URL = 'https://clothes-production-bc86.up.railway.app/api';
+const BASE_URL = 'https://pakaian-backend-production.up.railway.app/api';
 
 export const registerUser = async (email, password) => {
   try {

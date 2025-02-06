@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://clothes-production-bc86.up.railway.app';
+const API_BASE_URL = 'https://pakaian-backend-production.up.railway.app';
 
 export const fetchProducts = async () => {
   try {

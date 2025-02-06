@@ -16,7 +16,7 @@ export const createOrder = async (cart) => {
   };
 
   const response = await axios.post(
-    'https://clothes-production-bc86.up.railway.app/api/orders',
+    'https://pakaian-backend-production.up.railway.app/api/orders',
     orderData
   );
   return response.data.order;
