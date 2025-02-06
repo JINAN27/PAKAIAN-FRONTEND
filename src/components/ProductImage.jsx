@@ -17,7 +17,7 @@ export const ProductImage = ({ product }) => {
     <div className="col-md-6 product-detail-image">
       <div className="product-image-container">
         <img 
-          src={`https://clothes-production-bc86.up.railway.app${product.image}`} 
+          src={`https://pakaian-backend-production.up.railway.app${product.image}`} 
           alt={product.name} 
           className="img-fluid rounded product-detail-image__img"
           onClick={handleImageClick}
@@ -26,7 +26,7 @@ export const ProductImage = ({ product }) => {
       <ImageZoomModal 
         isOpen={isZoomOpen}
         onClose={handleCloseZoom}
-        imageSrc={`https://clothes-production-bc86.up.railway.app${product.image}`}
+        imageSrc={`https://pakaian-backend-production.up.railway.app${product.image}`}
         altText={product.name}
       />
     </div>
