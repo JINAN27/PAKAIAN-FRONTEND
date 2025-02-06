@@ -4,7 +4,7 @@ export const ProductCard = ({ product }) => (
   <div className="product-card">
     <div className="product-image-container">
       <img
-        src={`https://clothes-production-bc86.up.railway.app${product.image}`}
+        src={`https://pakaian-backend-production.up.railway.app${product.image}`}
         alt={product.name}
         className="product-image"
       />
